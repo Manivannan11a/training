@@ -1,23 +1,27 @@
-import logo from './logo.svg';
+import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 import './App.css';
+// import Input from './component/input';
+// import Button from './component/button/Button'
+
+import Form from './component/form/Form';
+import Card from './component/card/index';
+import Layout from './component/layout';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Layout>
+          <Routes>
+            <Route path="/contact" element={<Form />}></Route>
+            <Route path="/about" element={<h1>About</h1>}></Route>
+            <Route path="/" element={<h1>Home</h1>}></Route>
+            <Route path="*" element={<h1>Not Found</h1>}></Route>
+          </Routes>
+        </Layout>
+      </Router>
+      
     </div>
   );
 }

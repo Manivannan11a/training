@@ -1,0 +1,26 @@
+.menu {
+    list-style-type: none;
+    display: flex;
+    width: 100%;
+    background: #ccc;
+}
+
+.menu > .menu-item {
+    padding: 10px;
+    margin: 10px;
+    font-weight: bolder;
+}
+
+.menu > .menu-item:hover {
+    background: black;
+    color: #fff;
+}
+
+.copy {
+    display: flex;
+    width: 100%;
+    background: #ccc;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+}
